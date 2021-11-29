@@ -8,12 +8,12 @@ pipeline {
         }
         stage('trigger_job_1') {
             steps {
-                sh 'curl --user admin:admin 'http://localhost:8080/job/job1/build?token=job1''
+                sh 'curl --user admin:admin "http://localhost:8080/job/job1/build?token=job1"'
             }
         }
         stage('trigger_job_2') {
             steps {
-                sh 'curl --user admin:admin 'http://localhost:8080/job/Job2/build?token=job2''
+                sh 'curl --user admin:admin "http://localhost:8080/job/Job2/build?token=job2"'
             }
         }
     }
